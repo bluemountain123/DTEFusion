@@ -1,2 +1,2 @@
-# EICMFusion
-CMamba and Edge feature extraction
+# DTEFusion
+The code for this paper will be released after peer review.
