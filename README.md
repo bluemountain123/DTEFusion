@@ -160,22 +160,4 @@ Before testing, update the checkpoint and test dataset paths in the `elif args.t
 
 The testing flow converts the fused luminance output back to RGB by combining it with the visible image chroma channels in YCbCr space. Results are written to a folder named after the test dataset and checkpoint.
 
-## Reproducibility Notes
 
-The script sets seeds for Python `random` and PyTorch in `main.py`, and `dataset.py` sets a fixed seed for dataset splitting and random crops. For stricter reproducibility, also record:
-
-- Python version
-- PyTorch, CUDA, and cuDNN versions
-- `mamba-ssm` version
-- Dataset name and exact train/test split
-- Checkpoint path and loss weights
-
-## Quick Sanity Check
-
-After editing the paths, run:
-
-```bash
-python -m py_compile main.py config.py dataset.py models/F_NSWT.py models/fusionlayer.py models/TCMblock.py
-```
-
-Then run a short training experiment by lowering `epochs` in `config/model2.yaml` to `1`.
