@@ -160,4 +160,29 @@ Before testing, update the checkpoint and test dataset paths in the `elif args.t
 
 The testing flow converts the fused luminance output back to RGB by combining it with the visible image chroma channels in YCbCr space. Results are written to a folder named after the test dataset and checkpoint.
 
+## Citation
+If you use this code in your research, please cite the following paper:
+
+```bash
+TY  - JOUR
+T1  - DTEFusion: a dual-transformation network enhanced fusion method for infrared and visible images with improved mamba
+AU  - Wu, Xiaocong
+AU  - Feng, Xin
+JO  - Infrared Physics & Technology
+SP  - 106647
+PY  - 2026
+DA  - 2026/05/11/
+SN  - 1350-4495
+DO  - https://doi.org/10.1016/j.infrared.2026.106647
+UR  - https://www.sciencedirect.com/science/article/pii/S1350449526002823
+KW  - Infrared andvisibleimagefusion
+KW  - Multiscalefeatureenhancement
+KW  - Token convolutionalMamba
+KW  - Adaptiveparametertuning
+AB  - The primary goal of image fusion is to generate clearer and more visually perceptible results consistent with human vision. Most existing fusion methods primarily focus on optimizing specific objective metrics, which often results in insufficient representation of the inherent multiscale and multidirectional characteristics of human visual perception. To address this issue, a dual-transformation enhancement network (DTEFusion) is more suited to the human visual system. It is combined with an improved Mamba module for infrared and visible image fusion, mimicking the human visual mechanism by jointly modeling multiscale structural details and cross-modal feature interactions to achieve more perceptually consistent fusion results. Specifically, the proposed frequency channel attention nonsubsampled wavelet transform (F-NSWT)module combines frequency-channel attention with a nonsubsampled wavelet transform to enhance multiscale frequency-domain features in visible images; the FreMLP module strengthens target feature representations in infrared images; and the token-convolution mamba (TCM) module integrates the advantages of CNN and Mamba to effectively capture both local and global dependencies while maintaining computational efficiency. In addition, the cross-model skip-dense connection (C-SDC) fusion layer enables adaptive cross-modal feature interaction. Moreover, we employ a particle swarm optimization (PSO) algorithm to tune the loss function hyperparameters and adaptively optimize our objective metrics. Experimental results demonstrate that our method achieves superior overall performance compared with eleven state-of-the-art fusion algorithms. Our approach attains the highest MS-SSIM scores across four benchmark datasets, indicating closer alignment with human visual perception. The code for this paper will be released at https://github.com/bluemountain123 /DTEFusion.
+ER  - 
+
+}
+```
+
 
